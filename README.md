@@ -9,7 +9,7 @@ Website contains following info:
 * what the wedding schedule will look like;
 * what the dresscode is.
 
-Website contains a from where main guest:
+Website contains a form where main guest:
 * Can choose if he/she has a +1 coming;
 * can choose if he/she will be staying overnight;
 * can choose what kind of food they  will be eating out of 3 possible choises;
