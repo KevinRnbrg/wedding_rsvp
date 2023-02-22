@@ -34,3 +34,9 @@
   font-family: 'Pinyon Script';
   font-size: 3rem;
 }
+
+@media screen and (max-device-width:640px), screen and (max-width:640px) {
+  .outer-container {
+    width: 100vw;
+  }
+}

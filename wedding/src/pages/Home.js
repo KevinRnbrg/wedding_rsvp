@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Typography, Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import "../styles/App.css";
 import "../styles/HomeStyles.css";
 
 const Home = () => {
+  const [state, setState] = useState();
+
   return (
     <Box className="App">
       <Box className="outer-container">
