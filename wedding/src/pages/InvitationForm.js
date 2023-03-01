@@ -18,45 +18,86 @@ const InvitationForm = () => {
       <Box className="outer-container">
         <form /* onSubmit={handleSubmit} */>
           <Typography>RSVP</Typography>
-          <Typography>1. Kirjuta oma ees- ja perekonnanimi:</Typography>
+          <Typography>Külalise ees- ja perekonnanimi:</Typography>
           <TextField></TextField>
           {/* checkboxes should be next to the question */}
-          <Typography>2. Kas sa võtad üritusest osa?</Typography>
+          <Typography>Kas tuled?</Typography>
           <Checkbox />
-          <Typography>3. Kas sinuga tuleb kaasa +1?</Typography>
+          <Typography>Kas tuled kaaslasega?</Typography>
           <Checkbox />
-          <Typography>4. Kas sa jääd ööseks?</Typography>
+          <Typography>Kaaslase ees- ja perekonnanimi:</Typography>
+          <TextField></TextField>
+          <Typography>
+            Kas plaanid ööbida? (Kõigile külalistele ööbimine igal juhul tagatud
+            ja määratud)
+          </Typography>
           <Checkbox />
-          <Typography>5. Vali üks kolmest toidust õhtusöögiks:</Typography>
+          <Typography>Millist toitu eelistad pearoana?</Typography>
           <RadioGroup aria-labelledby="food-choise" name="radio-buttons-group">
+            <FormControlLabel value="liha" control={<Radio />} label="Liha" />
             <FormControlLabel
-              value="karbonara"
+              value="linnuliha"
               control={<Radio />}
-              label="Karbonara"
+              label="Linnuliha"
             />
+            <FormControlLabel value="kala" control={<Radio />} label="Kala" />
             <FormControlLabel
-              value="bolognese"
+              value="ilmalihata"
               control={<Radio />}
-              label="Bolognese"
+              label="Ilma lihata"
             />
-            <FormControlLabel value="ramen" control={<Radio />} label="Ramen" />
           </RadioGroup>
           {/* if +1 is checked then offer to choose a food for them aswell */}
-          <Typography>
-            6. Vali üks kolmest toidust õhtusöögiks +1-le:
-          </Typography>
+          <Typography>Millist toitu eelistab kaaslane pearoana?</Typography>
           <RadioGroup aria-labelledby="food-choise" name="radio-buttons-group">
+            <FormControlLabel value="liha" control={<Radio />} label="Liha" />
             <FormControlLabel
-              value="karbonara"
+              value="linnuliha"
               control={<Radio />}
-              label="Karbonara"
+              label="Linnuliha"
+            />
+            <FormControlLabel value="kala" control={<Radio />} label="Kala" />
+            <FormControlLabel
+              value="ilmalihata"
+              control={<Radio />}
+              label="Ilma lihata"
+            />
+          </RadioGroup>
+          <Typography>Kuidas plaanid pidutseda?</Typography>
+          <RadioGroup
+            aria-labelledby="partytime"
+            name="radio-buttons-party-group"
+          >
+            <FormControlLabel
+              value="1"
+              control={<Radio />}
+              label="Nii, et homset pole"
             />
             <FormControlLabel
-              value="bolognese"
+              value="2"
               control={<Radio />}
-              label="Bolognese"
+              label="Söön koogi ära ja lähen magama"
             />
-            <FormControlLabel value="ramen" control={<Radio />} label="Ramen" />
+            <FormControlLabel
+              value="3"
+              control={<Radio />}
+              label="Saan parimaks sõbraks pruudi isaga"
+            />
+            <FormControlLabel
+              value="4"
+              control={<Radio />}
+              label="Tantsin terve õhtu peigmehe emaga"
+            />
+            <FormControlLabel
+              value="5"
+              control={<Radio />}
+              label="Ärkan hommikul esimesena"
+            />
+            <FormControlLabel
+              value="5"
+              control={<Radio />}
+              label="Leian igast lauast uue sõbra"
+            />
           </RadioGroup>
           <Box className="save-button">
             <Button variant="contained" type="submit">

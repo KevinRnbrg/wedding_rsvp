@@ -33,13 +33,18 @@
 }
 
 .font-link {
-  font-family: 'Pinyon Script';
+  font-family: 'Great Vibes';
   font-size: 2rem;
 }
 
 .font-h1 {
-  font-family: 'Pinyon Script';
+  font-family: 'Great Vibes';
   font-size: 3rem;
+}
+
+.font-default {
+  font-family: 'Roboto Flex';
+  font-size: 2rem;
 }
 
 @media screen and (max-device-width:640px), screen and (max-width:640px) {

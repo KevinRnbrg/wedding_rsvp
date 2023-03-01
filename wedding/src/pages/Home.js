@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Typography, Button } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import "../styles/App.css";
 import "../styles/HomeStyles.css";
@@ -12,9 +12,9 @@ const Home = () => {
     <Box className="App">
       <Box className="outer-container">
         <h1 className="font-h1">Kelli ja Tanel</h1>
-        <h2>15 juuni 2023</h2>
+        <h2>15.06.2023</h2>
         <Link to="/invitation" style={{ textDecoration: "none" }}>
-          <Button variant="outlined">Anna teada oma tulekust</Button>
+          <Button variant="outlined">Anna teada oma tulekust (RSVP)</Button>
         </Link>
         <Box className="menu-buttons">
           <button className="menu-selection font-link">Asukoht</button>
