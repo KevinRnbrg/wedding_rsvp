@@ -30,7 +30,40 @@ button {
 
 @media screen and (max-device-width:640px), screen and (max-width:640px) {
   .google-map {
-    width: 70vw;
+    width: 80vw;
     height: 30vh;
   }
+
+  .menu-buttons {
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 90%;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+  }
+
+  .menu-selection {
+    width: 100%;
+  }
+}
+
+.component {
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: 0.3s all;
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 1;
+}
+
+.hide-component{
+  opacity: 0;
+  pointer-events: none;
+  z-index: -1;
 }

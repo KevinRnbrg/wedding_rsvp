@@ -1,4 +1,5 @@
 import { Box, Typography } from "@mui/material";
+
 function Place() {
   return (
     <Box className="component-box">
