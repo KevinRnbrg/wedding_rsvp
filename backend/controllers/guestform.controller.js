@@ -7,6 +7,6 @@ exports.saveinfo = async (req, res) => {
 }
 
 exports.getinfo = async (req, res) => {
-    const getInfo = await Body.find({}, {_id: 0, __v: 0})
+    const getInfo = await GuestForm.find({}, {_id: 0, __v: 0})
     res.send(getInfo)
 }

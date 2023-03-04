@@ -7,13 +7,8 @@ const mongoose = require("mongoose");
 
 const guestFormRoutes = require('./routes/guestform.routes')
 
-const cors=require("cors");
-const corsOptions ={
-   origin:'*', 
-   credentials:true,
-   optionSuccessStatus:200,
-}
-app.use(cors(corsOptions))
+var cors = require('cors');
+app.use(cors());
 
 app.use(morgan("dev"));
 app.use(express.json())
@@ -21,7 +16,7 @@ app.use(express.json())
 {
   /* link is wrong, must be changed when database is created */
 }
-const uri = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@fitnesstracker0.q4smdde.mongodb.net/?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@weddingcluster0.dpqltzr.mongodb.net/?retryWrites=true&w=majority`;
 
 mongoose
   .connect(uri)

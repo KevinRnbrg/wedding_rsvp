@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose')
 
-const bodySchema = new Schema(
+const guestFormSchema = new Schema(
     {
         name: { type: String, required: true },
         attendance: { type: Boolean, required: true },
@@ -13,9 +13,9 @@ const bodySchema = new Schema(
     }
 )
 
-formSchema.statics.saveinfo = async ({ name, attendance, companion, compname, staynight, foodpref, compfoodpref, party }) => {
+guestFormSchema.statics.saveinfo = async ({ name, attendance, companion, compname, staynight, foodpref, compfoodpref, party }) => {
     return new Promise(async (resolve, reject) => {
-        const newForm = new Form({
+        const newForm = new GuestForm({
             name, 
             attendance, 
             companion, 
@@ -25,14 +25,10 @@ formSchema.statics.saveinfo = async ({ name, attendance, companion, compname, st
             compfoodpref, 
             party
         })
-
-        newForm.save((err) => {
-            if (err) return reject(err)
-            resolve(newForm)
-        })
+        console.log(await newForm.save());
     })
 }
 
-const GuestForm = model('BodyTrackModel', bodySchema)
+const GuestForm = model('GuestFormModel', guestFormSchema)
 
 module.exports = GuestForm
