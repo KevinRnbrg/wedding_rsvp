@@ -22,7 +22,7 @@
 }
 
 .menu-selection:hover {
-  color: rosybrown;
+  color: rgb(219, 167, 25);
 }
 
 button {
@@ -32,6 +32,7 @@ button {
 
 #rsvp-button {
   background-color: white;
+  margin-bottom: 10%;
 }
 
 @media screen and (max-device-width:640px), screen and (max-width:640px) {

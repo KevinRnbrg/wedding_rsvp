@@ -1,16 +1,19 @@
 import { Box } from "@mui/material";
+import "../styles/ComponentStyles.css";
 
 function Place() {
   return (
     <Box className="component-box">
-      <p className="font-default">
-        Pulmad toimuvad Kernu mõisas, mis asub Tallinn-Pärnu maanteel, kuhu
-        peaks olema mugav sõita nii neil, kes saabuvad Tallinnast kui ka neil,
-        kes tulevad Hiiumaalt.
-      </p>
-      <p className="font-default">
-        Mõisas on ööbimisruumi meile kõigile ning mõnus väike spaa.
-      </p>
+      <Box className="light-box">
+        <p className="font-default">
+          Pulmad toimuvad Kernu mõisas, mis asub Tallinn-Pärnu maanteel, kuhu
+          peaks olema mugav sõita nii neil, kes saabuvad Tallinnast kui ka neil,
+          kes tulevad Hiiumaalt.
+        </p>
+        <p className="font-default">
+          Mõisas on ööbimisruumi meile kõigile ning mõnus väike spaa.
+        </p>
+      </Box>
       <iframe
         className="google-map"
         title="googleMaps"

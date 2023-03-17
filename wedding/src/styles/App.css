@@ -57,11 +57,31 @@
   font-size: 3rem;
 }
 
+.font-h2 {
+  font-family: 'Great Vibes';
+  font-size: 2rem;
+}
+
 .font-default {
   font-family: 'Roboto Flex';
   font-size: 1rem;
-  margin: 2rem 1.5rem 0px 1.5rem;
-  text-align: justify;
+  margin: 2rem 1.5rem 1.5rem 1.5rem;
+}
+
+.font-default-label {
+  font-family: 'Roboto Flex';
+  font-size: 1rem;
+}
+
+.font-default-label-bold {
+  font-weight: bold;
+  font-family: 'Roboto Flex';
+  font-size: 1.2rem;
+}
+
+.font-default-heading {
+  font-family: 'Roboto Flex';
+  font-size: 2rem;
 }
 
 @media screen and (max-device-width:640px), screen and (max-width:640px) {
