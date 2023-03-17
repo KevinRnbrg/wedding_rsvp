@@ -62,30 +62,32 @@ const Home = () => {
 
   return (
     <Box className="App">
-      <Box className="outer-container">
-        <h1 className="font-h1">Kelli ja Tanel</h1>
-        <h2>15.06.2023</h2>
-        <Link to="/invitation" style={{ textDecoration: "none" }}>
-          <Button variant="outlined">Anna teada oma tulekust (RSVP)</Button>
-        </Link>
-        <Box className="menu-buttons">
-          <button id="id-place" className="menu-selection font-link" onClick={() => {handlePlaceChange();}}>Asukoht</button>
-          <button id="id-gifts" className="menu-selection font-link" onClick={() => {handleGiftsChange();}}>
-            Kingitused ja lilled
-          </button>
-          <button id="id-schedule" className="menu-selection font-link" onClick={() => {handleScheduleChange();}}>Kava</button>
-          <button id="id-clothes" className="menu-selection font-link" onClick={() => {handleClothesChange();}}>Riietumisstiil</button>
+      <Box className="background-image">
+        <Box className="outer-container">
+          <h1 className="font-h1">Kelli ja Tanel</h1>
+          <h2>15.06.2023</h2>
+          <Link to="/invitation" style={{ textDecoration: "none" }}>
+            <Button id="rsvp-button" variant="outlined">Anna teada oma tulekust (RSVP)</Button>
+          </Link>
+          <Box className="menu-buttons">
+            <button id="id-place" className="menu-selection font-link" onClick={() => {handlePlaceChange();}}>Asukoht</button>
+            <button id="id-gifts" className="menu-selection font-link" onClick={() => {handleGiftsChange();}}>
+              Kingitused ja lilled
+            </button>
+            <button id="id-schedule" className="menu-selection font-link" onClick={() => {handleScheduleChange();}}>Kava</button>
+            <button id="id-clothes" className="menu-selection font-link" onClick={() => {handleClothesChange();}}>Riietumisstiil</button>
+          </Box>
+          <hr style={{
+            background: 'black',
+            color: 'black',
+            height: '3px',
+            width: '90%'
+          }}/>
+          {!hidePlace ? <Place /> : null}
+          {!hideGifts ? <Gifts /> : null}
+          {!hideClothes ? <Clothes /> : null}
+          {!hideSchedule ? <Schedule /> : null}
         </Box>
-        <hr style={{
-          background: 'black',
-          color: 'black',
-          height: '3px',
-          width: '90%'
-        }}/>
-        {!hidePlace ? <Place /> : null}
-        {!hideGifts ? <Gifts /> : null}
-        {!hideClothes ? <Clothes /> : null}
-        {!hideSchedule ? <Schedule /> : null}
       </Box>
     </Box>
   );

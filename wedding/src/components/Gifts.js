@@ -1,12 +1,12 @@
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 
 function Gifts() {
   return (
     <Box className="component-box">
-      <Typography sx={{ mt: "2rem", px: "2rem" }}>
+      <p className="font-default">
         Et külalised palju nuputama ei peaks, ootame kingitust ümbrikusse ning
         pruut võtab hea meelega vastu kõik kaunid lilled.
-      </Typography>
+      </p>
     </Box>
   );
 }

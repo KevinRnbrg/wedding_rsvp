@@ -22,7 +22,7 @@ const BodyForm = props => {
     const compfoodprefRef = useRef("")
     const partyRef = useRef("")
     
-    useEffect (() => {
+    useEffect (() => { /* this part is to be removed */
         console.log("renderer")
     }, [ name, attendance, companion, compname, staynight, foodpref, compfoodpref, party ])
 

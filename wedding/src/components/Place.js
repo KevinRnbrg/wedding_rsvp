@@ -1,16 +1,16 @@
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 
 function Place() {
   return (
     <Box className="component-box">
-      <Typography sx={{ mt: "2rem", px: "2rem" }} className="font-default">
+      <p className="font-default">
         Pulmad toimuvad Kernu mõisas, mis asub Tallinn-Pärnu maanteel, kuhu
         peaks olema mugav sõita nii neil, kes saabuvad Tallinnast kui ka neil,
         kes tulevad Hiiumaalt.
-      </Typography>
-      <Typography sx={{ mt: "2rem", px: "2rem" }}>
+      </p>
+      <p className="font-default">
         Mõisas on ööbimisruumi meile kõigile ning mõnus väike spaa.
-      </Typography>
+      </p>
       <iframe
         className="google-map"
         title="googleMaps"

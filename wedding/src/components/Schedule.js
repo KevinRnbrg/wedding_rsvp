@@ -1,16 +1,16 @@
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 
 function Schedule() {
   return (
     <Box className="component-box">
-      <Typography sx={{ mt: "2rem", px: "2rem" }}>
+      <p className="font-default">
         Külaliste saabumist ootame vahemikus 14:00 – 15:00. Selles vahemikus
         saate teha check-ini ja sättida end valmis pidustusteks, mis hakkavad
         veidi hiljem.
-      </Typography>
-      <Typography sx={{ mt: "2rem", px: "2rem" }}>
+      </p>
+      <p className="font-default">
         Täpsema ajakavaga saab tutvuda koha peal.
-      </Typography>
+      </p>
     </Box>
   );
 }

@@ -1,19 +1,19 @@
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 
 function Clothes() {
   return (
     <Box className="component-box">
-      <Typography sx={{ mt: "2rem", px: "2rem" }}>
+      <p className="font-default">
         Palume kanda pidulikku riietust.
-      </Typography>
-      <Typography sx={{ mt: "2rem", px: "2rem" }}>
+      </p>
+      <p className="font-default">
         Järgmiseks hommikuks võtke kaasa mugavad riided ja kiiremad saavad
         järgmisel hommikul pidustutest taastuda mõisa hubases spaas.
-      </Typography>
-      <Typography sx={{ mt: "2rem", px: "2rem" }}>
+      </p>
+      <p className="font-default">
         PS! Tseremoonia toimub plaani järgi mõisahoovis ning järgnevad
         pidustused sisetingimustes.
-      </Typography>
+      </p>
     </Box>
   );
 }
