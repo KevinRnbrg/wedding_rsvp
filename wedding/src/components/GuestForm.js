@@ -77,6 +77,7 @@ const BodyForm = (props) => {
     if (name === "" || foodpref === "" || party === "") {
       setOpenWarning(true);
     } else {
+      /* maybe axios should be made into async/await function */
       axios
         .post("http://localhost:8080/guestform/saveinfo", {
           name: nameRef.current.value,
