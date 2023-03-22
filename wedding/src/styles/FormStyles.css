@@ -20,6 +20,10 @@ form {
     margin-bottom: 20px;
 }
 
+.red {
+    color: red;
+}
+
 @media screen and (max-device-width:640px), screen and (max-width:640px) {
     .form-box{
         width: 95vw;
