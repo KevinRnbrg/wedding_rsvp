@@ -38,8 +38,8 @@ const BodyForm = (props) => {
   const compfoodprefRef = useRef("");
   const partyRef = useRef("");
 
+  /*
   useEffect(() => {
-    /* this part is to be removed */
     console.log("renderer");
   }, [
     name,
@@ -50,12 +50,12 @@ const BodyForm = (props) => {
     foodpref,
     compfoodpref,
     party,
-  ]);
+  ]); */
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log({
-      /* to be removed */ name,
+    /* console.log({
+      name,
       attendance,
       companion,
       compname,
@@ -63,9 +63,9 @@ const BodyForm = (props) => {
       foodpref,
       compfoodpref,
       party,
-    });
-    console.log({
-      /* to be removed */ nameRef: name,
+    }); */
+    /* console.log({
+      nameRef: name,
       attendanceRef: attendance,
       companionRef: companion,
       compnameRef: compname,
@@ -73,7 +73,7 @@ const BodyForm = (props) => {
       foodprefRef: foodpref,
       compfoodprefRef: compfoodpref,
       partyRef: party,
-    });
+    }); */
     if (name === "" || foodpref === "" || party === "") {
       setOpenWarning(true);
     } else {
@@ -89,10 +89,8 @@ const BodyForm = (props) => {
           party: party,
         })
         .then(function (response) {
-          console.log(response);
-          if (response.success) {
-            setOpenSuccess(true);
-          }
+          console.log(response); /* this part doesn't seem to work */
+          setOpenSuccess(true);
         })
         .catch(function (error) {
           console.log(error);

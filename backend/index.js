@@ -5,30 +5,28 @@ const PORT = 8080;
 require("dotenv").config();
 const mongoose = require("mongoose");
 
-const guestFormRoutes = require('./routes/guestform.routes')
+const guestFormRoutes = require("./routes/guestform.routes");
 
-var cors = require('cors');
+const cors = require("cors");
 app.use(cors());
 
 app.use(morgan("dev"));
-app.use(express.json())
+app.use(express.json());
 
-{
-  /* link is wrong, must be changed when database is created */
-}
-const uri = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@weddingcluster0.dpqltzr.mongodb.net/?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://kevinrosenberg04:mongoMAN1000@weddingcluster0.dpqltzr.mongodb.net/?retryWrites=true&w=majority`;
+/* const uri = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@weddingcluster0.dpqltzr.mongodb.net/?retryWrites=true&w=majority`;  /* acting up */
 
 mongoose
   .connect(uri)
   .then(() => console.log("Database connection established"))
   .catch((e) => console.error(e));
 
-  app.use('/guestform', guestFormRoutes)
+app.use("/guestform", guestFormRoutes);
 
-  app.get('*', (req, res) => {
-    res.send('404')
-  })
-  
-  app.listen(PORT, () => {
-    console.log(`Server started at port ${PORT}`)
-  })
+app.get("*", (req, res) => {
+  res.send("404");
+});
+
+app.listen(PORT, () => {
+  console.log(`Server started at port ${PORT}`);
+});
