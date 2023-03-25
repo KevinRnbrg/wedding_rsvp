@@ -4,11 +4,11 @@ const guestFormSchema = new Schema(
     {
         name: { type: String, required: true },
         attendance: { type: Boolean, required: true },
-        companion: { type: Boolean, required: true },
-        compname: { type: String, required: true },
+        companion: { type: Boolean, required: false },
+        compname: { type: String, required: false },
         staynight: { type: Boolean, required: true },
         foodpref: { type: String, required: true },
-        compfoodpref: { type: String, required: true},
+        compfoodpref: { type: String, required: false},
         party: { type: String, required: true }
     }
 )

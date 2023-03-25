@@ -9,7 +9,7 @@ import {
   RadioGroup,
   Checkbox,
 } from "@mui/material";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 import "../styles/FormStyles.css";
 import axios from "axios";
 import Snackbar from "@mui/material/Snackbar";
@@ -38,71 +38,49 @@ const BodyForm = (props) => {
   const compfoodprefRef = useRef("");
   const partyRef = useRef("");
 
-  /*
-  useEffect(() => {
-    console.log("renderer");
-  }, [
-    name,
-    attendance,
-    companion,
-    compname,
-    staynight,
-    foodpref,
-    compfoodpref,
-    party,
-  ]); */
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    /* console.log({
-      name,
-      attendance,
-      companion,
-      compname,
-      staynight,
-      foodpref,
-      compfoodpref,
-      party,
-    }); */
-    /* console.log({
-      nameRef: name,
-      attendanceRef: attendance,
-      companionRef: companion,
-      compnameRef: compname,
-      staynightRef: staynight,
-      foodprefRef: foodpref,
-      compfoodprefRef: compfoodpref,
-      partyRef: party,
-    }); */
-    if (name === "" || foodpref === "" || party === "") {
-      setOpenWarning(true);
-    } else {
-      /* maybe axios should be made into async/await function */
-      axios
-        .post("http://localhost:8080/guestform/saveinfo", {
-          name: nameRef.current.value,
-          attendance: attendance,
-          companion: companion,
-          compname: compname,
-          staynight: staynight,
-          foodpref: foodpref,
-          compfoodpref: compfoodpref,
-          party: party,
-        })
-        .then(function (response) {
-          console.log(response); /* this part doesn't seem to work */
-          setOpenSuccess(true);
-        })
-        .catch(function (error) {
-          console.log(error);
-          setOpenError(true);
-        });
-    }
-  };
-
   const [openWarning, setOpenWarning] = React.useState(false);
   const [openSuccess, setOpenSuccess] = React.useState(false);
   const [openError, setOpenError] = React.useState(false);
+
+    const postData = async () => {
+        try {
+            await axios
+                .post("http://localhost:8080/guestform/saveinfo", {
+                    name: name,
+                    attendance: attendance,
+                    companion: companion,
+                    compname: compname,
+                    staynight: staynight,
+                    foodpref: foodpref,
+                    compfoodpref: compfoodpref,
+                    party: party
+                }).then(function (res) {
+                    console.log(res); /* siia ei joua midagi kui saata infot */
+                    if (res.success) { 
+                        setOpenSuccess(true);
+                    }
+                });          
+        } catch (error) {
+            console.log(error);
+            setOpenError(true);
+        }
+    };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (name === "" || foodpref === "" || party === "") {
+      setOpenWarning(true);
+      console.log("sinu viga");
+    } else {
+        if (companion === true && (compname === "" || compfoodpref === "")) {
+            setOpenWarning(true);
+            console.log("kaaslase viga");
+        } else {
+            postData();
+        }  
+    }
+  };
+
   const handleClose = (event, reason) => {
     if (reason === "clickaway") {
       return;

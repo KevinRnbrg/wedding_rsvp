@@ -8,13 +8,18 @@ const mongoose = require("mongoose");
 const guestFormRoutes = require("./routes/guestform.routes");
 
 const cors = require("cors");
-app.use(cors());
+const corsOptions ={
+  origin:'*', 
+  credentials:true,
+  optionSuccessStatus:200,
+}
+app.use(cors(corsOptions));
 
 app.use(morgan("dev"));
 app.use(express.json());
 
-const uri = `mongodb+srv://kevinrosenberg04:mongoMAN1000@weddingcluster0.dpqltzr.mongodb.net/?retryWrites=true&w=majority`;
-/* const uri = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@weddingcluster0.dpqltzr.mongodb.net/?retryWrites=true&w=majority`;  /* acting up */
+/* const uri = `mongodb+srv://kevinrosenberg04:mongoMAN1000@weddingcluster0.dpqltzr.mongodb.net/?retryWrites=true&w=majority`; */
+const uri = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@weddingcluster0.dpqltzr.mongodb.net/?retryWrites=true&w=majority`;  /* acting up */
 
 mongoose
   .connect(uri)
