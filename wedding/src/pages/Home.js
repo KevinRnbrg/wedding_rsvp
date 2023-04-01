@@ -63,7 +63,7 @@ const Home = () => {
           >
             {" "}
             {/* to="/invitation" */}
-            <Button id="rsvp-button" variant="outlined">
+            <Button id="rsvp-button" variant="contained">
               Anna teada oma tulekust (RSVP)
             </Button>
           </Link>
