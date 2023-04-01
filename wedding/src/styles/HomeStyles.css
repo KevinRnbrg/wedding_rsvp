@@ -1,6 +1,6 @@
 .google-map {
     width: 50vw;
-    height: 35vh;
+    height: 40vh;
     margin-top: 3vh;
     box-shadow: 0px 0px 15px 0px rgba(110,110,110,1);
     border-radius: 5px;
@@ -31,14 +31,15 @@ button {
 }
 
 #rsvp-button {
-  background-color: white;
+  /* background-color: white; */
+  background-color: rgb(118, 155, 64);
   margin-bottom: 10%;
 }
 
 @media screen and (max-device-width:640px), screen and (max-width:640px) {
   .google-map {
     width: 90vw;
-    height: 30vh;
+    height: 40vh;
   }
 
   .menu-selection {

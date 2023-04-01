@@ -9,7 +9,7 @@
 
 .background-image {
   height: 100%;
-  background-image: url("../imgs/floral1.png");
+  background-image: url("../imgs/floral_more_lighter.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
@@ -24,11 +24,6 @@
   width: 95vw;
   height: auto;
   min-height: 100vh;
-  /* border: 3px solid black; */
-  /* box-shadow: 5px 5px 5px gray; */
-  /* background-color: white; */
-  
-  
 }
 
 .component-box {
@@ -36,6 +31,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-bottom: 3vh;
 }
 
 .dot {

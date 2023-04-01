@@ -67,7 +67,7 @@ const Home = () => {
           <h1 className="font-h1">Kelli ja Tanel</h1>
           <h2 className="font-h2">15.06.2023</h2>
           <Link to="/invitation" style={{ textDecoration: "none" }}>
-            <Button id="rsvp-button" variant="outlined">Anna teada oma tulekust (RSVP)</Button>
+            <Button id="rsvp-button" variant="contained" color="success">Anna teada oma tulekust (RSVP)</Button>
           </Link>
           <Box className="menu-buttons">
             <button id="id-place" className="menu-selection font-link" onClick={() => {handlePlaceChange();}}>Asukoht</button>
