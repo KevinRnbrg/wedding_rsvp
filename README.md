@@ -1,5 +1,5 @@
 # wedding_1
-Website for the wedding of Kelli and Tanel.
+RSVP website for the wedding of Kelli and Tanel.
 
 Website contains following info:
 * when the wedding will take place (date);
