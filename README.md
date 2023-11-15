@@ -14,8 +14,6 @@ Functionality:
 * Scalable design for bigger and smaller devices including mobile phones.
 * Switching between pages updates only the content that changes.
 
-![image](https://github.com/KevinRnbrg/wedding_1/assets/90057334/59e428ce-a7b5-4e66-b7ea-fc85fb260169)
-![image](https://github.com/KevinRnbrg/wedding_1/assets/90057334/ecf2739f-c2b1-4c01-b46f-949e6d73fe87)
-![image](https://github.com/KevinRnbrg/wedding_1/assets/90057334/76b6ae2b-0919-47c3-88f9-5bef596669a5)
-
-
+![image](https://github.com/KevinRnbrg/wedding_rsvp/assets/90057334/bb72648d-c5dd-4173-aeca-d52dac65e034)
+![image](https://github.com/KevinRnbrg/wedding_rsvp/assets/90057334/3d5fae62-12df-437b-bdbc-d52095e51b8d)
+![image](https://github.com/KevinRnbrg/wedding_rsvp/assets/90057334/814acd9f-8a9d-42b0-882c-5e91560d96a7)
