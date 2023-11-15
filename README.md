@@ -1,4 +1,4 @@
-# wedding_1
+# wedding_rsvp
 RSVP website for a wedding event.
 
 Website contains following info:
