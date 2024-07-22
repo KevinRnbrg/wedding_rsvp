@@ -18,8 +18,7 @@ app.use(cors(corsOptions));
 app.use(morgan("dev"));
 app.use(express.json());
 
-/* const uri = `mongodb+srv://kevinrosenberg04:mongoMAN1000@weddingcluster0.dpqltzr.mongodb.net/?retryWrites=true&w=majority`; */
-const uri = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@weddingcluster0.dpqltzr.mongodb.net/?retryWrites=true&w=majority`;  /* acting up */
+const uri = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@weddingcluster0.dpqltzr.mongodb.net/?retryWrites=true&w=majority`;
 
 mongoose
   .connect(uri)
